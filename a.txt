@@ -1,0 +1,9 @@
+cmake .. -DTEST_SUITE_BENCHMARKING_ONLY=ON -DTEST_SUITE_COLLECT_CODE_SIZE=OFF
+
+make
+
+azakai@azakai:~/Dev/llvm-test-suite/build$ ~/Dev/llvm/build/bin/llvm-lit -v -j 1 -o results.json .
+
+===
+
+LLVM=/home/azakai/Dev/llvm/build/bin cmake .. -DTEST_SUITE_BENCHMARKING_ONLY=ON -DTEST_SUITE_COLLECT_CODE_SIZE=OFF -DCMAKE_C_COMPILER=/home/azakai/Dev/emscripten/emcc -DCMAKE_CXX_COMPILER=/home/azakai/Dev/emscripten/em++
